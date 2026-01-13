@@ -79,17 +79,19 @@
 
 ---
 
-## Phase 3: Authentication ⏱️ Week 2
+## Phase 3: Authentication ⏱️ Week 2 🔄 IN PROGRESS
 
-### Task 3.1: User Model & Repository
-- [ ] Create internal/models/user.go
-- [ ] Create users migration (001_create_users.sql)
-- [ ] Create sessions migration (002_create_sessions.sql)
-- [ ] Implement internal/repositories/user_repository.go
+### Task 3.1: User Model & Repository ✅ COMPLETE
+- [x] Create internal/models/user.go
+- [x] Create users migration (001_create_users.sql)
+- [x] Create sessions migration (002_create_sessions.sql)
+- [x] Implement password validation helpers
+- [x] Write model tests (all passing)
+- [ ] Implement internal/repositories/user_repository.go (in progress)
 - [ ] Implement internal/repositories/session_repository.go
 - [ ] Write repository tests
 
-### Task 3.2: Auth Service
+### Task 3.2: Auth Service ⏭️ PENDING
 - [ ] Add breitheamh-auth dependency
 - [ ] Create internal/services/auth_service.go
 - [ ] Implement Register method

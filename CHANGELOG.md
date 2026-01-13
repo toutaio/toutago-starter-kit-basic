@@ -34,6 +34,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom CSS with flash message support
 - Static file serving
 - Complete Phase 2 infrastructure
+- User and Session models with validation
+- Database migrations for users and sessions (PostgreSQL & MySQL)
+- Password validation with complexity requirements
+- Password hashing with bcrypt
+- User roles (admin, editor, user)
+- breitheamh-auth integration
+- scela-bus message bus integration
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL
