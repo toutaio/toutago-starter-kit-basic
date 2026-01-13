@@ -134,7 +134,7 @@
 
 ## Phase 4: Content Management 🔄 IN PROGRESS - Week 3
 
-**Status**: 30% Complete (Models & Migrations Done)
+**Status**: 60% Complete (Models, Migrations, Repositories & Services Done)
 
 ### Task 4.1: Post System 🔄 IN PROGRESS
 - [x] Create internal/models/post.go
@@ -146,23 +146,29 @@
 - [x] Create post_tags migration (006_create_post_tags.sql)
 - [x] Create post_versions migration (007_create_post_versions.sql)
 - [x] Write model tests (all passing)
-- [ ] Create internal/repositories/post_repository.go
+- [x] Create internal/domain/post.go
+- [x] Create internal/repository/post_repository.go
+- [x] Write repository tests (all passing - 91.7% coverage)
+- [x] Create internal/service/post_service.go
+- [x] Write service tests (all passing - 77.5% coverage)
 - [ ] Create internal/repositories/category_repository.go
 - [ ] Create internal/repositories/tag_repository.go
-- [ ] Create internal/services/post_service.go
 - [ ] Create internal/handlers/post_handler.go
-- [ ] Write tests for post CRUD
+- [ ] Write handler tests for post CRUD
 - [ ] Create post templates (index, show, edit, new)
 
-### Task 4.2: Page System 🔄 IN PROGRESS
+### Task 4.2: Page System ✅ COMPLETE
 - [x] Create internal/models/page.go
 - [x] Create pages migration (008_create_pages.sql)
 - [x] Create page_versions migration (009_create_page_versions.sql)
 - [x] Write model tests (all passing)
-- [ ] Create internal/repositories/page_repository.go
-- [ ] Create internal/services/page_service.go
+- [x] Create internal/domain/page.go
+- [x] Create internal/repository/page_repository.go
+- [x] Write repository tests (all passing - 91.7% coverage)
+- [x] Create internal/service/page_service.go
+- [x] Write service tests (all passing - 77.5% coverage)
 - [ ] Create internal/handlers/page_handler.go
-- [ ] Write tests for page CRUD
+- [ ] Write handler tests for page CRUD
 - [ ] Create page templates (index, show, edit)
 
 ### Task 4.3: Slug Generation ✅ COMPLETE

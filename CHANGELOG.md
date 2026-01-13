@@ -48,6 +48,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Auth handlers (register, login, logout)
 - Auth middleware (RequireAuth, RequireRole, OptionalAuth)
 - Auth templates (login, register, forgot/reset password)
+- Content management models (Post, Page, Category, Tag)
+- Post domain model with status management (draft, published, archived)
+- Page domain model with status management (draft, published, archived)
+- PostRepository with full CRUD operations
+- PageRepository with full CRUD operations
+- Repository tests with 91.7% coverage
+- PostService with business logic and validation
+- PageService with business logic and validation
+- Service tests with 77.5% coverage
+- Post publishing/unpublishing functionality
+- Page publishing/unpublishing functionality
+- Slug-based content retrieval
+- Author-based post filtering
+- Status-based content filtering
 - Enhanced navigation with user dropdown
 - Session-based authentication with cookies
 - Pico.css styling for auth pages
