@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }} - Starter Kit Basic</title>
+    
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/custom.css">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong>Starter Kit Basic</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/health">Health</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>Welcome to Starter Kit Basic</h1>
+            <p>
+                A production-ready Go web application starter kit built with the Toutā framework.
+            </p>
+
+            <section>
+                <h2>Features</h2>
+                <ul>
+                    <li>🔐 Complete authentication system</li>
+                    <li>🎨 Server-Side Rendering with Fíth</li>
+                    <li>⚡ Progressive enhancement with HTMX</li>
+                    <li>🗄️ PostgreSQL and MySQL support</li>
+                    <li>🐳 Docker ready</li>
+                    <li>✅ Comprehensive tests</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Quick Links</h2>
+                <div class="grid">
+                    <div>
+                        <h3>Health Check</h3>
+                        <p>
+                            <a href="/health" role="button">Check System Health</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Documentation</h3>
+                        <p>
+                            <a href="https://github.com/toutaio/toutago-starter-kit-basic" role="button" class="secondary">
+                                View on GitHub
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="container">
+        <small>
+            Powered by <a href="https://github.com/toutaio">Toutā Framework</a>
+        </small>
+    </footer>
+</body>
+</html>

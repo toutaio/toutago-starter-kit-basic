@@ -1,2 +1,12 @@
+filippo.io/edwards25519 v1.1.0 h1:FNf4tywRC1HmFuKW5xopWpigGjJKiJSV0Cqo0cJWDaA=
+filippo.io/edwards25519 v1.1.0/go.mod h1:BxyFTGdWcka3PhytdK4V28tE5sGfRvvvRV7EaN4VDT4=
+github.com/go-sql-driver/mysql v1.9.3 h1:U/N249h2WzJ3Ukj8SowVFjdtZKfu9vlLZxjPXV1aweo=
+github.com/go-sql-driver/mysql v1.9.3/go.mod h1:qn46aNg1333BRMNU69Lq93t8du/dwxI64Gl8i5p1WMU=
+github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
+github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
 github.com/toutaio/toutago-cosan-router v1.1.0 h1:nEUa9VyshRtmpVHcADHl9Oa8tOGwmJLktc0j3V0822o=
 github.com/toutaio/toutago-cosan-router v1.1.0/go.mod h1:fFWn6W62UnDBP5yD1Kq+QvdiCZ+80H815Z8RRVZcun4=
+github.com/toutaio/toutago-fith-renderer v1.0.6 h1:UDLCib8yjoPeN+siN9c9Z2Wtuo0Qdtbp64+zNO+6Qxo=
+github.com/toutaio/toutago-fith-renderer v1.0.6/go.mod h1:3ztfz/WG39ZDb5z8mq6sr74vk/oGqUTAkNNNcsLiWk0=
+golang.org/x/text v0.14.0 h1:ScX5w1eTa3QqT8oi6+ziP7dTV1S2+ALU0bI+0zXKWiQ=
+golang.org/x/text v0.14.0/go.mod h1:18ZOQIKpY8NJVqYksKHtTdi31H5itFRjB5/qKTNYzSU=

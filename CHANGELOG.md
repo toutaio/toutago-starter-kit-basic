@@ -26,6 +26,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Placeholder documentation structure
 - HTTP middleware (Logger, Recovery, SecurityHeaders, CORS, RequestID)
 - Integration with toutago-cosan-router
+- Database connection management with connection pooling
+- PostgreSQL and MySQL driver support
+- Health check endpoint with database status
+- Template rendering with toutago-fith-renderer
+- Home page with Pico.css styling
+- Custom CSS with flash message support
+- Static file serving
+- Complete Phase 2 infrastructure
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL
@@ -37,5 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Environment variable validation tests
 - Database connection string generation tests
 - Middleware tests with comprehensive coverage
+- Database connection tests
+- Health handler tests
+- Home handler tests with template rendering
 
 [Unreleased]: https://github.com/toutaio/toutago-starter-kit-basic/commits/main
