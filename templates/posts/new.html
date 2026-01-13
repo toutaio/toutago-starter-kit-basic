@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }} - Starter Kit Basic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong>Starter Kit Basic</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/posts">Posts</a></li>
+                <li><a href="/pages">Pages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <header>
+                <h1>Create New Post</h1>
+            </header>
+
+            <form method="POST" action="/posts">
+                <label for="title">
+                    Title
+                    <input type="text" id="title" name="title" required autofocus>
+                </label>
+
+                <label for="content">
+                    Content
+                    <textarea id="content" name="content" rows="15" required></textarea>
+                </label>
+
+                <label for="status">
+                    Status
+                    <select id="status" name="status">
+                        <option value="draft" selected>Draft</option>
+                        <option value="published">Published</option>
+                    </select>
+                </label>
+
+                <div class="grid">
+                    <a href="/posts" role="button" class="secondary outline">Cancel</a>
+                    <button type="submit">Create Post</button>
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <footer class="container">
+        <small>Powered by <a href="https://github.com/toutaio">Toutā Framework</a></small>
+    </footer>
+</body>
+</html>

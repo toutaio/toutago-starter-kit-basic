@@ -15,6 +15,7 @@ type Page struct {
 	Title       string     `json:"title"`
 	Slug        string     `json:"slug"`
 	Content     string     `json:"content"`
+	AuthorID    int64      `json:"author_id"`
 	Status      PageStatus `json:"status"`
 	MetaTitle   string     `json:"meta_title"`
 	MetaDesc    string     `json:"meta_desc"`

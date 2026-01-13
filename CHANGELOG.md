@@ -76,6 +76,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Markdown to HTML conversion with sanitization
 - URL-friendly slug generation with unicode support
 - Image upload with type and size validation
+- Post handler with full CRUD operations (Index, Show, Create, Update, Delete)
+- Page handler with full CRUD operations (Index, Show, Create, Update, Delete)
+- Post templates (index, show, new, edit) with Pico.css styling
+- Page templates (index, show, new, edit) with Pico.css styling
+- Publish/unpublish actions for posts and pages
+- Authorization checks for post/page editing and deletion
+- Integration with helpers for slug generation
+- AuthorID field to Page domain model for consistency
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }} - Starter Kit Basic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong>Starter Kit Basic</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/posts">Posts</a></li>
+                <li><a href="/pages">Pages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <header>
+                <h1>{{ .post.Title }}</h1>
+                <p>
+                    <small>
+                        Status: <strong>{{ .post.Status }}</strong>
+                        {{- if .post.PublishedAt }}
+                        | Published: {{ .post.PublishedAt.Format "January 2, 2006" }}
+                        {{end}}
+                    </small>
+                </p>
+            </header>
+
+            <div>
+                {{ .post.Content }}
+            </div>
+
+            <footer>
+                <a href="/posts" role="button" class="secondary outline">Back to Posts</a>
+                <a href="/posts/{{ .post.ID }}/edit" role="button" class="outline">Edit</a>
+            </footer>
+        </article>
+    </main>
+
+    <footer class="container">
+        <small>Powered by <a href="https://github.com/toutaio">Toutā Framework</a></small>
+    </footer>
+</body>
+</html>

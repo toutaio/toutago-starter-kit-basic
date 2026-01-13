@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }} - Starter Kit Basic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+<body>
+    <header class="container">
+        <nav>
+            <ul>
+                <li><strong>Starter Kit Basic</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages">Pages</a></li>
+                <li><a href="/pages">Pages</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article>
+            <header>
+                <h1>Pages</h1>
+                <p><a href="/pages/new" role="button">Create New Page</a></p>
+            </header>
+
+            {{- if .pages }}
+            <div class="grid">
+                {{- range .pages }}
+                <article>
+                    <header>
+                        <h3><a href="/pages/{{ .Slug }}">{{ .Title }}</a></h3>
+                    </header>
+                    <p>{{ .Content | slice 0 150 }}...</p>
+                    <footer>
+                        <small>
+                            Status: <strong>{{ .Status }}</strong>
+                            {{- if .PublishedAt }}
+                            | Published: {{ .PublishedAt.Format "2006-01-02" }}
+                            {{end}}
+                        </small>
+                    </footer>
+                </article>
+                {{end}}
+            </div>
+
+            {{- if gt .page 1 }}
+            <a href="/pages?page={{ sub .page 1 }}" role="button" class="outline">Previous</a>
+            {{end}}
+            {{- if lt .page 10 }}
+            <a href="/pages?page={{ add .page 1 }}" role="button" class="outline">Next</a>
+            {{end}}
+            {{else}}
+            <p>No pages found. <a href="/pages/new">Create your first page!</a></p>
+            {{end}}
+        </article>
+    </main>
+
+    <footer class="container">
+        <small>Powered by <a href="https://github.com/toutaio">Toutā Framework</a></small>
+    </footer>
+</body>
+</html>
