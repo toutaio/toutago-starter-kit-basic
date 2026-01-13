@@ -52,6 +52,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Session-based authentication with cookies
 - Pico.css styling for auth pages
 - Comprehensive auth tests (30 new tests)
+- Post and Page models with soft delete (trash) support
+- Category and Tag models for post organization
+- PostVersion and PageVersion models for content history
+- Content helper functions (slug generation, markdown rendering, HTML sanitization)
+- File upload helper with image validation
+- Database migrations for posts, pages, categories, tags (PostgreSQL & MySQL)
+- Support for version history tracking
+- Markdown to HTML conversion with sanitization
+- URL-friendly slug generation with unicode support
+- Image upload with type and size validation
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL

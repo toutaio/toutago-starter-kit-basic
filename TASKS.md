@@ -132,32 +132,52 @@
 
 ---
 
-## Phase 4: Content Management ⏱️ Week 3
+## Phase 4: Content Management 🔄 IN PROGRESS - Week 3
 
-### Task 4.1: Post System
-- [ ] Create internal/models/post.go
-- [ ] Create posts migration (003_create_posts.sql)
+**Status**: 30% Complete (Models & Migrations Done)
+
+### Task 4.1: Post System 🔄 IN PROGRESS
+- [x] Create internal/models/post.go
+- [x] Create internal/models/category.go  
+- [x] Create internal/models/tag.go
+- [x] Create posts migration (005_create_posts.sql)
+- [x] Create categories migration (003_create_categories.sql)
+- [x] Create tags migration (004_create_tags.sql)
+- [x] Create post_tags migration (006_create_post_tags.sql)
+- [x] Create post_versions migration (007_create_post_versions.sql)
+- [x] Write model tests (all passing)
 - [ ] Create internal/repositories/post_repository.go
+- [ ] Create internal/repositories/category_repository.go
+- [ ] Create internal/repositories/tag_repository.go
 - [ ] Create internal/services/post_service.go
 - [ ] Create internal/handlers/post_handler.go
 - [ ] Write tests for post CRUD
 - [ ] Create post templates (index, show, edit, new)
 
-### Task 4.2: Page System
-- [ ] Create internal/models/page.go
-- [ ] Create pages migration (004_create_pages.sql)
+### Task 4.2: Page System 🔄 IN PROGRESS
+- [x] Create internal/models/page.go
+- [x] Create pages migration (008_create_pages.sql)
+- [x] Create page_versions migration (009_create_page_versions.sql)
+- [x] Write model tests (all passing)
 - [ ] Create internal/repositories/page_repository.go
 - [ ] Create internal/services/page_service.go
 - [ ] Create internal/handlers/page_handler.go
 - [ ] Write tests for page CRUD
 - [ ] Create page templates (index, show, edit)
 
-### Task 4.3: Slug Generation
-- [ ] Implement slug generation utility
-- [ ] Add slug uniqueness validation
-- [ ] Test slug generation
+### Task 4.3: Slug Generation ✅ COMPLETE
+- [x] Implement slug generation utility (internal/helpers/content.go)
+- [x] Add markdown rendering
+- [x] Add HTML sanitization
+- [x] Test slug generation (all passing)
 
-### Task 4.4: Authorization
+### Task 4.4: File Upload Support ✅ COMPLETE
+- [x] Implement file upload helper (internal/helpers/upload.go)
+- [x] Add image validation
+- [x] Add file size limits
+- [x] Support multiple image types
+
+### Task 4.5: Authorization
 - [ ] Implement post ownership checks
 - [ ] Implement page ownership checks
 - [ ] Add role-based permissions
