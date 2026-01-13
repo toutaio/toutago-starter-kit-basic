@@ -1,0 +1,35 @@
+<article>
+    <header>
+        <h1>Login</h1>
+        <p>Sign in to your account</p>
+    </header>
+    
+    {{- if .error }}
+    <div role="alert" class="error">
+        {{ .error }}
+    </div>
+    {{end}}
+    
+    <form method="POST" action="/login">
+        <label for="email">
+            Email
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </label>
+        
+        <label for="password">
+            Password
+            <input type="password" id="password" name="password" placeholder="Your password" required>
+        </label>
+        
+        <button type="submit">Sign In</button>
+    </form>
+    
+    <footer>
+        <p>
+            Don't have an account? <a href="/register">Register</a>
+        </p>
+        <p>
+            <a href="/forgot-password">Forgot your password?</a>
+        </p>
+    </footer>
+</article>

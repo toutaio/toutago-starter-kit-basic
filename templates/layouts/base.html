@@ -22,7 +22,29 @@
             </ul>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/health">Health</a></li>
+                {{- if .user }}
+                <li><a href="/dashboard">Dashboard</a></li>
+                {{- if .user.IsAdmin }}
+                <li><a href="/admin">Admin</a></li>
+                {{end}}
+                <li>
+                    <details role="list" dir="rtl">
+                        <summary aria-haspopup="listbox" role="link">{{ .user.Username }}</summary>
+                        <ul role="listbox">
+                            <li><a href="/profile">Profile</a></li>
+                            <li><a href="/settings">Settings</a></li>
+                            <li>
+                                <form method="POST" action="/logout" style="margin: 0;">
+                                    <button type="submit" class="contrast outline" style="width: 100%;">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                {{else}}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register" role="button">Register</a></li>
+                {{end}}
             </ul>
         </nav>
     </header>

@@ -1,0 +1,51 @@
+<article>
+    <header>
+        <h1>Create Account</h1>
+        <p>Join us today</p>
+    </header>
+    
+    {{- if .error }}
+    <div role="alert" class="error">
+        {{ .error }}
+    </div>
+    {{end}}
+    
+    <form method="POST" action="/register">
+        <div class="grid">
+            <label for="first_name">
+                First Name
+                <input type="text" id="first_name" name="first_name" placeholder="John">
+            </label>
+            
+            <label for="last_name">
+                Last Name
+                <input type="text" id="last_name" name="last_name" placeholder="Doe">
+            </label>
+        </div>
+        
+        <label for="email">
+            Email
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </label>
+        
+        <label for="username">
+            Username
+            <input type="text" id="username" name="username" placeholder="johndoe" required>
+            <small>At least 3 characters, letters and numbers only</small>
+        </label>
+        
+        <label for="password">
+            Password
+            <input type="password" id="password" name="password" placeholder="Strong password" required>
+            <small>Minimum 8 characters, must include uppercase, lowercase, number, and special character</small>
+        </label>
+        
+        <button type="submit">Create Account</button>
+    </form>
+    
+    <footer>
+        <p>
+            Already have an account? <a href="/login">Sign in</a>
+        </p>
+    </footer>
+</article>

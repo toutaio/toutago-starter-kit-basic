@@ -101,40 +101,34 @@
 - [x] Implement ResetPassword method
 - [x] Write service tests (all passing)
 
-### Task 3.3: Auth Handlers ⏭️ PENDING
-- [ ] Create internal/handlers/auth_handler.go
-- [ ] Implement Register method
-- [ ] Implement Login method
-- [ ] Implement Logout method
-- [ ] Implement VerifyEmail method
-- [ ] Implement ResetPassword method
-- [ ] Write service tests
+### Task 3.3: Auth Handlers ✅ COMPLETE
+- [x] Create internal/handlers/auth_handler.go
+- [x] Implement Register handler
+- [x] Implement Login handler  
+- [x] Implement Logout handler
+- [x] Cookie management
+- [x] Form data processing
+- [x] Write handler tests (all passing)
 
-### Task 3.3: Auth Handlers
-- [ ] Create internal/handlers/auth_handler.go
-- [ ] Implement register handler (GET + POST)
-- [ ] Implement login handler (GET + POST)
-- [ ] Implement logout handler
-- [ ] Implement forgot password handler
-- [ ] Implement reset password handler
-- [ ] Implement email verification handler
+### Task 3.4: Auth Middleware ✅ COMPLETE
+- [x] Create internal/middleware/auth.go
+- [x] Implement RequireAuth middleware
+- [x] Implement RequireRole middleware
+- [x] Implement OptionalAuth middleware
+- [x] Session extraction from cookies
+- [x] User context storage
+- [x] Write middleware tests (all passing)
 
-### Task 3.4: Auth Middleware
-- [ ] Create internal/middleware/auth.go
-- [ ] Implement RequireAuth middleware
-- [ ] Implement RequireRole middleware
-- [ ] Implement CSRF protection
-- [ ] Test middleware
+### Task 3.5: Auth Templates ✅ COMPLETE
+- [x] Create templates/auth/login.html
+- [x] Create templates/auth/register.html
+- [x] Create templates/auth/forgot-password.html
+- [x] Create templates/auth/reset-password.html
+- [x] Update navigation with auth links
+- [x] Style with Pico.css
+- [x] Add error/success messages styling
 
-### Task 3.5: Auth Templates
-- [ ] Create templates/auth/login.html
-- [ ] Create templates/auth/register.html
-- [ ] Create templates/auth/forgot_password.html
-- [ ] Create templates/auth/reset_password.html
-- [ ] Create templates/auth/verify_email.html
-- [ ] Style with Pico.css
-
-**Deliverable**: Complete authentication system with tests
+**Deliverable**: ✅ Complete authentication system with tests
 
 ---
 

@@ -45,7 +45,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - SessionStore for session management  
 - AuthService with register, login, logout, password reset
 - Email verification support
-- Comprehensive auth tests (24 new tests)
+- Auth handlers (register, login, logout)
+- Auth middleware (RequireAuth, RequireRole, OptionalAuth)
+- Auth templates (login, register, forgot/reset password)
+- Enhanced navigation with user dropdown
+- Session-based authentication with cookies
+- Pico.css styling for auth pages
+- Comprehensive auth tests (30 new tests)
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL
