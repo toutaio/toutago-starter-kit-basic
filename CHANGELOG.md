@@ -41,6 +41,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - User roles (admin, editor, user)
 - breitheamh-auth integration
 - scela-bus message bus integration
+- UserRepository with in-memory implementation
+- SessionStore for session management  
+- AuthService with register, login, logout, password reset
+- Email verification support
+- Comprehensive auth tests (24 new tests)
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL

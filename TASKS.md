@@ -87,13 +87,22 @@
 - [x] Create sessions migration (002_create_sessions.sql)
 - [x] Implement password validation helpers
 - [x] Write model tests (all passing)
-- [ ] Implement internal/repositories/user_repository.go (in progress)
-- [ ] Implement internal/repositories/session_repository.go
-- [ ] Write repository tests
+- [x] Implement internal/repositories/user_repository.go
+- [x] Implement internal/services/session_store.go
+- [x] Write repository tests (all passing)
 
-### Task 3.2: Auth Service ⏭️ PENDING
-- [ ] Add breitheamh-auth dependency
-- [ ] Create internal/services/auth_service.go
+### Task 3.2: Auth Service ✅ COMPLETE
+- [x] Add breitheamh-auth dependency
+- [x] Create internal/services/auth_service.go
+- [x] Implement Register method
+- [x] Implement Login method
+- [x] Implement Logout method
+- [x] Implement VerifyEmail method
+- [x] Implement ResetPassword method
+- [x] Write service tests (all passing)
+
+### Task 3.3: Auth Handlers ⏭️ PENDING
+- [ ] Create internal/handlers/auth_handler.go
 - [ ] Implement Register method
 - [ ] Implement Login method
 - [ ] Implement Logout method
