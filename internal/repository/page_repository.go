@@ -170,6 +170,24 @@ func (r *PageRepository) ListByStatus(ctx context.Context, status domain.PageSta
 	return r.scanPages(rows)
 }
 
+func (r *PageRepository) ListByAuthor(ctx context.Context, authorID int64, limit, offset int) ([]*domain.Page, error) {
+	query := `
+		SELECT id, title, slug, content, status, meta_title, meta_desc, published_at, created_at, updated_at
+		FROM pages
+		WHERE author_id = $1
+		ORDER BY created_at DESC
+		LIMIT $2 OFFSET $3
+	`
+
+	rows, err := r.db.QueryContext(ctx, query, authorID, limit, offset)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	return r.scanPages(rows)
+}
+
 func (r *PageRepository) scanPages(rows *sql.Rows) ([]*domain.Page, error) {
 	var pages []*domain.Page
 

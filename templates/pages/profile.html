@@ -1,0 +1,73 @@
+{{define "pages/profile"}}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Starter Kit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    {{template "partials/header" .}}
+    
+    <main class="container">
+        <hgroup>
+            <h1>Profile</h1>
+            <p>Manage your profile information</p>
+        </hgroup>
+
+        {{if .Success}}
+        <article style="background-color: var(--pico-color-green-100); border-color: var(--pico-color-green-500);">
+            {{.Success}}
+        </article>
+        {{end}}
+
+        {{if .Error}}
+        <article style="background-color: var(--pico-color-red-100); border-color: var(--pico-color-red-500);">
+            {{.Error}}
+        </article>
+        {{end}}
+
+        <article>
+            <header>
+                <strong>Profile Information</strong>
+            </header>
+            
+            <form method="POST" action="/profile">
+                <label>
+                    Email
+                    <input type="email" name="email" value="{{.User.Email}}" required>
+                </label>
+
+                <label>
+                    Role
+                    <input type="text" value="{{.User.Role}}" readonly disabled>
+                    <small>Your role determines your permissions</small>
+                </label>
+
+                <label>
+                    Member Since
+                    <input type="text" value="{{.User.CreatedAt.Format "January 2, 2006"}}" readonly disabled>
+                </label>
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </article>
+
+        <article>
+            <header>
+                <strong>Account Actions</strong>
+            </header>
+            
+            <div class="grid">
+                <a href="/settings" role="button" class="secondary">Change Password</a>
+                <a href="/dashboard" role="button" class="contrast">Back to Dashboard</a>
+            </div>
+        </article>
+    </main>
+
+    {{template "partials/footer" .}}
+</body>
+</html>
+{{end}}

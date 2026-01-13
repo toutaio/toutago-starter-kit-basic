@@ -186,3 +186,26 @@ func (s *AuthService) ResetPassword(token, newPassword string) error {
 
 	return s.userRepo.Update(user)
 }
+
+// UpdatePassword updates a user's password.
+func (s *AuthService) UpdatePassword(userID uint, newPassword string) error {
+	// Validate new password
+	if err := helpers.ValidatePassword(newPassword); err != nil {
+		return err
+	}
+
+	// Hash password
+	passwordHash, err := helpers.HashPassword(newPassword)
+	if err != nil {
+		return err
+	}
+
+	user, err := s.userRepo.FindByID(int(userID))
+	if err != nil {
+		return err
+	}
+
+	user.PasswordHash = passwordHash
+
+	return s.userRepo.Update(user)
+}

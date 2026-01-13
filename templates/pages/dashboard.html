@@ -1,0 +1,113 @@
+{{define "pages/dashboard"}}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Starter Kit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    {{template "partials/header" .}}
+    
+    <main class="container">
+        <hgroup>
+            <h1>Dashboard</h1>
+            <p>Welcome back, {{.User.Email}}!</p>
+        </hgroup>
+
+        <!-- Stats Cards -->
+        <section class="grid">
+            <article>
+                <header>Posts</header>
+                <h2>{{.PostCount}}</h2>
+                <footer>
+                    <a href="/posts/new" role="button">Create New Post</a>
+                </footer>
+            </article>
+            
+            <article>
+                <header>Pages</header>
+                <h2>{{.PageCount}}</h2>
+                <footer>
+                    <a href="/pages/new" role="button">Create New Page</a>
+                </footer>
+            </article>
+            
+            <article>
+                <header>Role</header>
+                <h2>{{.User.Role}}</h2>
+                <footer>
+                    <a href="/profile" role="button" class="secondary">View Profile</a>
+                </footer>
+            </article>
+        </section>
+
+        <!-- Recent Activity -->
+        <section>
+            <h2>Recent Activity</h2>
+            {{if .RecentActivity}}
+            <table role="grid">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Title</th>
+                        <th>Action</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range .RecentActivity}}
+                    <tr>
+                        <td>
+                            {{if eq .Type "post"}}📝 Post{{else}}📄 Page{{end}}
+                        </td>
+                        <td>{{.Title}}</td>
+                        <td>{{.Action}}</td>
+                        <td>{{.Timestamp.Format "Jan 02, 2006"}}</td>
+                    </tr>
+                    {{end}}
+                </tbody>
+            </table>
+            {{else}}
+            <p>No recent activity to display.</p>
+            {{end}}
+        </section>
+
+        <!-- Recent Posts -->
+        {{if .RecentPosts}}
+        <section>
+            <h2>Recent Posts</h2>
+            <div class="grid">
+                {{range .RecentPosts}}
+                <article>
+                    <header>
+                        <strong>{{.Title}}</strong>
+                    </header>
+                    <p>{{.Excerpt}}</p>
+                    <footer>
+                        <small>{{.CreatedAt.Format "Jan 02, 2006"}}</small>
+                        <a href="/posts/{{.Slug}}">Read more</a>
+                    </footer>
+                </article>
+                {{end}}
+            </div>
+        </section>
+        {{end}}
+
+        <!-- Quick Actions -->
+        <section>
+            <h2>Quick Actions</h2>
+            <div class="grid">
+                <a href="/posts/new" role="button">New Post</a>
+                <a href="/pages/new" role="button" class="secondary">New Page</a>
+                <a href="/settings" role="button" class="contrast">Settings</a>
+            </div>
+        </section>
+    </main>
+
+    {{template "partials/footer" .}}
+</body>
+</html>
+{{end}}

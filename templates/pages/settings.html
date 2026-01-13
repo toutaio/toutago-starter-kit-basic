@@ -1,0 +1,92 @@
+{{define "pages/settings"}}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Starter Kit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    {{template "partials/header" .}}
+    
+    <main class="container">
+        <hgroup>
+            <h1>Settings</h1>
+            <p>Manage your account settings</p>
+        </hgroup>
+
+        {{if .Success}}
+        <article style="background-color: var(--pico-color-green-100); border-color: var(--pico-color-green-500);">
+            {{.Success}}
+        </article>
+        {{end}}
+
+        {{if .Error}}
+        <article style="background-color: var(--pico-color-red-100); border-color: var(--pico-color-red-500);">
+            {{.Error}}
+        </article>
+        {{end}}
+
+        <article>
+            <header>
+                <strong>Change Password</strong>
+            </header>
+            
+            <form method="POST" action="/settings/password">
+                <label>
+                    Current Password
+                    <input type="password" name="current_password" required minlength="8">
+                </label>
+
+                <label>
+                    New Password
+                    <input type="password" name="new_password" required minlength="8">
+                    <small>Must be at least 8 characters long</small>
+                </label>
+
+                <label>
+                    Confirm New Password
+                    <input type="password" name="confirm_password" required minlength="8">
+                </label>
+
+                <button type="submit">Update Password</button>
+            </form>
+        </article>
+
+        <article>
+            <header>
+                <strong>Account Information</strong>
+            </header>
+            
+            <dl>
+                <dt>Email</dt>
+                <dd>{{.User.Email}}</dd>
+                
+                <dt>Role</dt>
+                <dd>{{.User.Role}}</dd>
+                
+                <dt>Member Since</dt>
+                <dd>{{.User.CreatedAt.Format "January 2, 2006"}}</dd>
+            </dl>
+
+            <a href="/profile" role="button" class="secondary">Edit Profile</a>
+        </article>
+
+        <article>
+            <header>
+                <strong>Navigation</strong>
+            </header>
+            
+            <div class="grid">
+                <a href="/dashboard" role="button" class="contrast">Back to Dashboard</a>
+                <a href="/auth/logout" role="button" class="secondary">Logout</a>
+            </div>
+        </article>
+    </main>
+
+    {{template "partials/footer" .}}
+</body>
+</html>
+{{end}}
