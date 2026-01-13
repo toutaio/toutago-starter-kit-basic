@@ -27,7 +27,11 @@ func main() {
 
 	// Check for migration command
 	if len(os.Args) > 1 && os.Args[1] == "migrate" {
-		log.Println("Migration command not yet implemented")
+		log.Println("Running database migrations...")
+		if err := database.RunMigrations(cfg.Database); err != nil {
+			log.Fatalf("Migration failed: %v", err)
+		}
+		log.Println("Migrations completed successfully")
 		os.Exit(0)
 	}
 
