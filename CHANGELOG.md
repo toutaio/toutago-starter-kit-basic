@@ -78,6 +78,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Category and Tag models for post organization
 - PostVersion and PageVersion models for content history
 - Content helper functions (slug generation, markdown rendering, HTML sanitization)
+- Dashboard handler with user statistics
+- Dashboard template showing posts, pages, and activity
+- Profile handler for viewing and updating user information
+- Profile template with email editing capability
+- Settings handler with password change functionality
+- Settings template for account management
+- UpdatePassword method in AuthService
+- ListByAuthor method in PageRepository
 - File upload helper with image validation
 - Database migrations for posts, pages, categories, tags (PostgreSQL & MySQL)
 - Support for version history tracking

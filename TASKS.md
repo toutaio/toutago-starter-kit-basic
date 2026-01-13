@@ -202,18 +202,18 @@
 - [ ] Test responsive design
 
 ### Task 5.2: Dashboard
-- [ ] Create internal/handlers/dashboard_handler.go
-- [ ] Create templates/pages/dashboard.html
-- [ ] Show user stats
-- [ ] Show recent activity
-- [ ] Add quick action buttons
+- [x] Create internal/handlers/dashboard_handler.go
+- [x] Create templates/pages/dashboard.html
+- [x] Show user stats
+- [x] Show recent activity
+- [x] Add quick action buttons
 
 ### Task 5.3: Profile & Settings
-- [ ] Create internal/handlers/profile_handler.go
-- [ ] Create templates/pages/profile.html
-- [ ] Create internal/handlers/settings_handler.go
-- [ ] Create templates/pages/settings.html
-- [ ] Implement password change
+- [x] Create internal/handlers/profile_handler.go
+- [x] Create templates/pages/profile.html
+- [x] Create internal/handlers/settings_handler.go
+- [x] Create templates/pages/settings.html
+- [x] Implement password change
 - [ ] Implement email update
 
 ### Task 5.4: HTMX Integration
