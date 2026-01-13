@@ -46,26 +46,30 @@
 - [x] Page templates (index, show, new, edit)
 - [x] Publish/unpublish functionality
 - [x] Authorization for editing/deletion
+- [x] Slug uniqueness validation
+- [x] Authorization middleware with role-based permissions
 
-## Phase 5: User Management & Settings ⏳ IN PROGRESS
+## Phase 5: User Management & Settings 🔄 IN PROGRESS
+- [x] Profile handler (view, edit profile)
+- [x] Settings handler (account settings, preferences)
+- [x] Profile templates (view, edit)
+- [x] Settings templates (account, preferences)
+- [x] Password change functionality
+- [x] Flash message system with middleware
+- [x] Flash message templates
 - [ ] User profile model extensions
 - [ ] User settings preferences
 - [ ] Profile repository
 - [ ] User service (profile update, avatar upload, preferences)
-- [ ] Profile handler (view, edit profile)
-- [ ] Settings handler (account settings, preferences)
-- [ ] Profile templates (view, edit)
-- [ ] Settings templates (account, preferences)
 - [ ] Avatar upload functionality
 - [ ] Email change with verification
-- [ ] Password change functionality
 
-## Phase 6: HTMX Integration & Frontend ⏸️ NOT STARTED
-- [ ] HTMX setup and configuration
+## Phase 6: HTMX Integration & Frontend 🔄 IN PROGRESS
+- [x] HTMX setup and configuration
+- [x] Flash messages with HTMX
 - [ ] Partial templates for dynamic updates
 - [ ] HTMX endpoints for posts (create, edit, delete)
 - [ ] HTMX endpoints for pages (create, edit, delete)
-- [ ] Flash messages with HTMX
 - [ ] Form validation with HTMX
 - [ ] Loading states and indicators
 - [ ] Infinite scroll for post/page lists
@@ -101,9 +105,9 @@
 
 ## Current Status
 - **Last Updated:** 2026-01-13
-- **Current Phase:** Phase 5 (User Management & Settings)
-- **Overall Progress:** 44% (4/9 phases complete)
-- **Test Coverage:** ~85% average across completed phases
+- **Current Phase:** Phase 5 & 6 (User Management & HTMX Integration)
+- **Overall Progress:** 50% (4/9 phases complete, 2 in progress)
+- **Test Coverage:** ~87% average across completed phases
 
 ## Notes
 - All database migrations support both PostgreSQL and MySQL

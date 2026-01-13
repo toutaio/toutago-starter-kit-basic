@@ -104,6 +104,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Authorization checks for post/page editing and deletion
 - Integration with helpers for slug generation
 - AuthorID field to Page domain model for consistency
+- Authorization middleware with role-based permissions (admin, editor, user)
+- Permission helpers (CanEdit, CanDelete, CanPublish, CanManageUsers)
+- RequireOwnership middleware for resource protection
+- Flash message system with middleware
+- Flash message template partial with auto-dismiss
+- Flash message styling (success, error, warning, info)
+- Slug uniqueness validation in PostService and PageService
+- Authorization tests with 100% coverage
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL
