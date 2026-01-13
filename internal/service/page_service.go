@@ -31,6 +31,12 @@ func (s *PageService) CreatePage(ctx context.Context, page *domain.Page) error {
 		return err
 	}
 
+	// Check slug uniqueness
+	existing, err := s.repo.GetBySlug(ctx, page.Slug)
+	if err == nil && existing != nil {
+		return errors.New("slug already exists")
+	}
+
 	if page.Status == "" {
 		page.Status = domain.PageStatusDraft
 	}
@@ -49,6 +55,12 @@ func (s *PageService) GetPageBySlug(ctx context.Context, slug string) (*domain.P
 func (s *PageService) UpdatePage(ctx context.Context, page *domain.Page) error {
 	if err := s.validatePage(page); err != nil {
 		return err
+	}
+
+	// Check slug uniqueness (excluding current page)
+	existing, err := s.repo.GetBySlug(ctx, page.Slug)
+	if err == nil && existing != nil && existing.ID != page.ID {
+		return errors.New("slug already exists")
 	}
 
 	return s.repo.Update(ctx, page)

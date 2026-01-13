@@ -32,6 +32,12 @@ func (s *PostService) CreatePost(ctx context.Context, post *domain.Post) error {
 		return err
 	}
 
+	// Check slug uniqueness
+	existing, err := s.repo.GetBySlug(ctx, post.Slug)
+	if err == nil && existing != nil {
+		return errors.New("slug already exists")
+	}
+
 	if post.Status == "" {
 		post.Status = domain.PostStatusDraft
 	}
@@ -50,6 +56,12 @@ func (s *PostService) GetPostBySlug(ctx context.Context, slug string) (*domain.P
 func (s *PostService) UpdatePost(ctx context.Context, post *domain.Post) error {
 	if err := s.validatePost(post); err != nil {
 		return err
+	}
+
+	// Check slug uniqueness (excluding current post)
+	existing, err := s.repo.GetBySlug(ctx, post.Slug)
+	if err == nil && existing != nil && existing.ID != post.ID {
+		return errors.New("slug already exists")
 	}
 
 	return s.repo.Update(ctx, post)
