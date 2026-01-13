@@ -1,4 +1,4 @@
-.PHONY: help dev build test lint clean migrate migrate-down migrate-status seed docker-dev docker-prod
+.PHONY: help dev build test lint clean migrate migrate-down migrate-status migrate-fresh migrate-reset seed docker-dev docker-prod
 
 help: ## Show this help message
 	@echo 'Usage: make [target]'
@@ -32,15 +32,23 @@ clean: ## Clean build artifacts
 
 migrate: ## Run database migrations
 	@echo "Running migrations..."
-	@go run cmd/migrate/main.go -action=up
+	@go run cmd/migrate/main.go migrate
 
 migrate-down: ## Rollback last migration
 	@echo "Rolling back migration..."
-	@go run cmd/migrate/main.go -action=down
+	@go run cmd/migrate/main.go rollback
 
 migrate-status: ## Check migration status
 	@echo "Checking migration status..."
-	@go run cmd/migrate/main.go -action=status
+	@go run cmd/migrate/main.go status
+
+migrate-fresh: ## Reset and re-run all migrations
+	@echo "Resetting and re-running migrations..."
+	@go run cmd/migrate/main.go fresh
+
+migrate-reset: ## Reset all migrations
+	@echo "Resetting migrations..."
+	@go run cmd/migrate/main.go reset
 
 seed: ## Seed database with demo data
 	@echo "Seeding database..."
