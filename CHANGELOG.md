@@ -34,10 +34,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom CSS with flash message support
 - Static file serving
 - Complete Phase 2 infrastructure
-- SQL-based migration system with embedded filesystem
-- Migration command (up, down, status)
+- SQL-based migration system using Sil migrator
+- Sil migrator integration for database migrations
+- Go-based migrations with Up/Down methods
 - Migration runner with transaction support
-- Embedded SQL migrations for PostgreSQL and MySQL
+- Database-agnostic migrations (PostgreSQL & MySQL)
+- Users table migration with authentication fields
+- Posts table migration with author relationship
+- Pages table migration with author relationship
 - User and Session models with validation
 - Database migrations for users and sessions (PostgreSQL & MySQL)
 - Password validation with complexity requirements
