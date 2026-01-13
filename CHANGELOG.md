@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - .gitignore for Go projects
 - .env.example with all configuration options
 - Placeholder documentation structure
+- HTTP middleware (Logger, Recovery, SecurityHeaders, CORS, RequestID)
+- Integration with toutago-cosan-router
 
 ### Fixed
 - Docker Compose healthcheck for PostgreSQL
@@ -34,5 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Configuration package tests with 100% coverage
 - Environment variable validation tests
 - Database connection string generation tests
+- Middleware tests with comprehensive coverage
 
 [Unreleased]: https://github.com/toutaio/toutago-starter-kit-basic/commits/main
