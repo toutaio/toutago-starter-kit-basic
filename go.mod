@@ -1,3 +1,3 @@
 module github.com/toutaio/toutago-starter-kit-basic
 
-go 1.22.9
+go 1.25.0

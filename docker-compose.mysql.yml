@@ -1,3 +1,7 @@
+
+# MySQL/MariaDB version of docker-compose
+# To use this: docker compose -f docker-compose.mysql.yml up
+
 services:
   app:
     build:
@@ -9,11 +13,11 @@ services:
       - "${PORT:-8080}:8080"
     environment:
       DB_HOST: db
-      DB_PORT: ${DB_PORT:-5432}
+      DB_PORT: 3306
       DB_USER: ${DB_USER:-starter_user}
       DB_PASSWORD: ${DB_PASSWORD:-changeme}
       DB_NAME: ${DB_NAME:-starter_db}
-      DB_DRIVER: ${DB_DRIVER:-postgres}
+      DB_DRIVER: mysql
       APP_ENV: development
       LOG_LEVEL: ${LOG_LEVEL:-debug}
     depends_on:
@@ -26,21 +30,22 @@ services:
       - starter-network
 
   db:
-    image: postgres:16-alpine
+    image: mariadb:11-alpine
     container_name: starter-kit-db
     restart: unless-stopped
     ports:
-      - "${DB_PORT:-5432}:5432"
+      - "3306:3306"
     environment:
-      POSTGRES_USER: ${DB_USER:-starter_user}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
-      POSTGRES_DB: ${DB_NAME:-starter_db}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-changeme}
+      MYSQL_DATABASE: ${DB_NAME:-starter_db}
+      MYSQL_USER: ${DB_USER:-starter_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-changeme}
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - db-data:/var/lib/mysql
     networks:
       - starter-network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-starter_user} -d ${DB_NAME:-starter_db}"]
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 5s
       timeout: 5s
       retries: 5
