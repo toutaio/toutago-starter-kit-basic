@@ -34,10 +34,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom CSS with flash message support
 - Static file serving
 - Complete Phase 2 infrastructure
-- SQL-based migration system using Sil migrator
 - Sil migrator integration for database migrations
 - Go-based migrations with Up/Down methods
-- Migration runner with transaction support
+- Migration runner command (cmd/migrate) with support for migrate, rollback, status, reset, and fresh
+- Database migrations for users, posts, and pages tables
+- Makefile targets for migration management (migrate, migrate-down, migrate-status, migrate-fresh, migrate-reset)
 - Database-agnostic migrations (PostgreSQL & MySQL)
 - Users table migration with authentication fields
 - Posts table migration with author relationship
