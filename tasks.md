@@ -11,7 +11,7 @@
 
 ## Phase 2: Core Infrastructure ✅ COMPLETED
 - [x] Database connection management
-- [x] Migration system integration (sil-migrator)
+- [x] Migration system integration (SQL-based migrations with embedded FS)
 - [x] Template system setup (fith-renderer)
 - [x] Router integration (cosan-router)
 - [x] Middleware (Logger, Recovery, SecurityHeaders, CORS, RequestID)

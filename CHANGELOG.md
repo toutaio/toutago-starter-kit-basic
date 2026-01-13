@@ -34,6 +34,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom CSS with flash message support
 - Static file serving
 - Complete Phase 2 infrastructure
+- SQL-based migration system with embedded filesystem
+- Migration command (up, down, status)
+- Migration runner with transaction support
+- Embedded SQL migrations for PostgreSQL and MySQL
 - User and Session models with validation
 - Database migrations for users and sessions (PostgreSQL & MySQL)
 - Password validation with complexity requirements
@@ -89,6 +93,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docker Compose healthcheck for PostgreSQL
 - Git VCS error in Docker build by adding -buildvcs=false flag
 - Database name in healthcheck command
+- Migration foreign key constraints by standardizing ID types to INTEGER/SERIAL
 
 ### Testing
 - Configuration package tests with 100% coverage
