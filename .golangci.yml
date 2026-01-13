@@ -1,0 +1,60 @@
+run:
+  deadline: 5m
+  tests: true
+  modules-download-mode: readonly
+
+linters:
+  enable:
+    - gofmt
+    - goimports
+    - govet
+    - errcheck
+    - staticcheck
+    - unused
+    - gosimple
+    - ineffassign
+    - typecheck
+    - gosec
+    - gocyclo
+    - dupl
+    - goconst
+    - misspell
+    - lll
+    - unparam
+    - nakedret
+    - prealloc
+    - nolintlint
+
+linters-settings:
+  gofmt:
+    simplify: true
+  
+  goimports:
+    local-prefixes: github.com/toutaio/toutago-starter-kit-basic
+  
+  gocyclo:
+    min-complexity: 15
+  
+  dupl:
+    threshold: 100
+  
+  goconst:
+    min-len: 3
+    min-occurrences: 5
+  
+  lll:
+    line-length: 120
+  
+  misspell:
+    locale: US
+  
+  unparam:
+    check-exported: false
+  
+  nakedret:
+    max-func-lines: 30
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
