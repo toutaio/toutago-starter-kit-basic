@@ -2,6 +2,7 @@ run:
   deadline: 5m
   tests: true
   modules-download-mode: readonly
+  go: '1.24'
 
 linters:
   enable:
