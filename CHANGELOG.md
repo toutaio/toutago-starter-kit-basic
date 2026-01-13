@@ -78,6 +78,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Post and Page models with soft delete (trash) support
 - Category and Tag models for post organization
 - PostVersion and PageVersion models for content history
+- Slug generation utility with comprehensive tests
+- URL-friendly slug conversion from any string
+- Fixed handler tests to accept HTTP 303 redirects
 - Content helper functions (slug generation, markdown rendering, HTML sanitization)
 - Dashboard handler with user statistics
 - Dashboard template showing posts, pages, and activity
