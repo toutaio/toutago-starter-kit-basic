@@ -4,9 +4,17 @@ github.com/go-sql-driver/mysql v1.9.3 h1:U/N249h2WzJ3Ukj8SowVFjdtZKfu9vlLZxjPXV1
 github.com/go-sql-driver/mysql v1.9.3/go.mod h1:qn46aNg1333BRMNU69Lq93t8du/dwxI64Gl8i5p1WMU=
 github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
 github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
+github.com/toutaio/toutago-breitheamh-auth v1.0.3 h1:7HYXieqy+LyqcrU0OFtyqIJ/UpA8NT4H13OTRzHJPdQ=
+github.com/toutaio/toutago-breitheamh-auth v1.0.3/go.mod h1:c2c040CjGJbhDZ1Pr8BS0+TGm+7Ff00DeE4jk/ldMOk=
 github.com/toutaio/toutago-cosan-router v1.1.0 h1:nEUa9VyshRtmpVHcADHl9Oa8tOGwmJLktc0j3V0822o=
 github.com/toutaio/toutago-cosan-router v1.1.0/go.mod h1:fFWn6W62UnDBP5yD1Kq+QvdiCZ+80H815Z8RRVZcun4=
 github.com/toutaio/toutago-fith-renderer v1.0.6 h1:UDLCib8yjoPeN+siN9c9Z2Wtuo0Qdtbp64+zNO+6Qxo=
 github.com/toutaio/toutago-fith-renderer v1.0.6/go.mod h1:3ztfz/WG39ZDb5z8mq6sr74vk/oGqUTAkNNNcsLiWk0=
+github.com/toutaio/toutago-scela-bus v1.5.5 h1:0pFokwDeiiDmOVq8oAixvcrLlCq5Bqp1Hj4Mh0EZ0RU=
+github.com/toutaio/toutago-scela-bus v1.5.5/go.mod h1:FHJY1ZXN5OBzQSgyTb+n0zk73UD0+uQgt8fGnU2d3JE=
+golang.org/x/crypto v0.47.0 h1:V6e3FRj+n4dbpw86FJ8Fv7XVOql7TEwpHapKoMJ/GO8=
+golang.org/x/crypto v0.47.0/go.mod h1:ff3Y9VzzKbwSSEzWqJsJVBnWmRwRSHt/6Op5n9bQc4A=
 golang.org/x/text v0.14.0 h1:ScX5w1eTa3QqT8oi6+ziP7dTV1S2+ALU0bI+0zXKWiQ=
 golang.org/x/text v0.14.0/go.mod h1:18ZOQIKpY8NJVqYksKHtTdi31H5itFRjB5/qKTNYzSU=
+golang.org/x/text v0.33.0 h1:B3njUFyqtHDUI5jMn1YIr5B0IE2U0qck04r6d4KPAxE=
+golang.org/x/text v0.33.0/go.mod h1:LuMebE6+rBincTi9+xWTY8TztLzKHc/9C1uBCG27+q8=
